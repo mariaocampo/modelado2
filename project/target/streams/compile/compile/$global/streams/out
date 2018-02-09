@@ -1,0 +1,4 @@
+[error] /home/maria/IdeaProjects/Modelado/project/Dependencies.scala:5:40: value %% is not a member of String
+[error]   lazy val scalaTest = "org.scalatest" %% "scalatest" %% "3.0.3"
+[error]                                        ^
+[error] one error found
