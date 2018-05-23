@@ -1,6 +1,7 @@
-import scala.collection.immutable.Range.Partial
+import scala.annotation.tailrec
 
-class Clase3 {
+object Clase3 {
+
   def fact0: PartialFunction[Int, Int] = { case 0 => 1}
   def factR: PartialFunction[Int, Int] = {case n => n * factR(n-1)}
 
@@ -11,6 +12,14 @@ class Clase3 {
       if (n <= 0) acc else factLoop(n - 1, n * acc)
     }
     factLoop(x,1)
+  }
+
+  def mcd(x: Int, y: Int): Int = {
+    @tailrec
+    def func(x: Int, y: Int): Int = {
+      if (y <= 0) x else func(y, x % y)
+    }
+    func(x, y)
   }
 
 }
